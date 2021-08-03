@@ -14,7 +14,8 @@ Demo:
 6. This will allow you to edit/delete/retrieve.
 
 Notes:
+
 1.A very basic and simple UI is implemented.
-2.As thymeleaf is used, have not created Rest APIs in the bcakend.
+2.As thymeleaf is used, have not created Rest APIs in the backend.
 3.The objective assumed was a working flow from frontend->backend->db and vice versa.
 
