@@ -1,0 +1,8 @@
+com\UserProject\controller\UserController.class
+com\UserProject\response\UserResponse.class
+com\UserProject\models\UserModel.class
+com\UserProject\UserProjectApplication.class
+com\UserProject\service\implementation\UserServiceImplementation.class
+com\UserProject\repository\UserRepository.class
+com\UserProject\request\UserRequest.class
+com\UserProject\service\UserService.class

@@ -1,0 +1,68 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+     <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	
+	<title>Register User</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<hr/><h1>New User</h1><hr/>
+		
+		<form th:action="@{/register}" th:object="${registration}" method="POST">
+			
+			<div class="form-group">
+				<label for="firstName">First Name</label>
+				<input type="text" th:field="*{firstName}" id="firstName" class="form-control mb-4 col-4"
+					 placeholder="Enter First Name" required/>
+			</div>
+			
+			<div class="form-group">
+				<label for="lastName">Last Name</label>
+				<input type="text" th:field="*{lastName}" id="lastName" class="form-control mb-4 col-4"
+						placeholder="Enter Last Name" required/>
+			</div>
+
+			<div class="form-group">
+				<label for="countryCode">Country Code</label>
+				<input type="text" th:field="*{countryCode}" id="countryCode" class="form-control mb-4 col-4"
+					   placeholder="e.g. +91" required/>
+			</div>
+
+			<div class="form-group">
+				<label for="contact">Phone Number</label>
+				<input type="text" th:field="*{contact}" id="contact" class="form-control mb-4 col-4"
+					   placeholder="Enter Contact No." required/>
+			</div>
+
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="text" th:field="*{email}" id="email" class="form-control mb-4 col-4"
+					   placeholder="Enter Email Address" required/>
+			</div>
+
+			<div class="form-group">
+				<label for="password">Password</label>
+				<input type="password" th:field="*{password}" id="password" class="form-control mb-4 col-4"
+					   placeholder="Enter Password" required/>
+			</div>
+		
+					
+			<button type="submit" class="btn btn-success col-2">Register</button>
+						
+		</form>
+	
+		<hr>	
+		<hr>
+	</div>
+</body>
+
+</html>
+

@@ -1,0 +1,56 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+	<title>Directory</title>
+</head>
+
+<body>
+
+	<div class="container">
+		<div class="table-responsive">
+			<table id="userlistTable" class="table table-bordered table-hover table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>First Name</th>
+						<th>Last Name</th>
+						<th>Email</th>
+						<th>Country Code</th>
+						<th>Contact</th>
+					</tr>
+				</thead>
+
+				<tbody>
+					<tr data-th-each="user : ${userlist}">
+						<td th:text="${user.id}"></td>
+						<td th:text="${user.firstName}"></td>
+						<td th:text="${user.lastName}"></td>
+						<td th:text="${user.email}"></td>
+						<td th:text="${user.countryCode}"></td>
+						<td th:text="${user.contact}"></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script>
+		$(document).ready(function () {
+			$("#userlistTable").DataTable({
+				"lengthMenu": [
+					[5, 10, 15, 20, -1], [5, 10, 15, 20, "All"]
+				]
+			});
+		});
+	</script>
+
+</body>
+
+</html>
